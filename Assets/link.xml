@@ -1,0 +1,13 @@
+<linker>
+  <assembly fullname="Assembly-CSharp">
+    <type fullname="EyeTracking.UI.RecorderPanelStartupProbe" preserve="all" />
+    <type fullname="EyeTracking.UI.RecorderPanelRuntimeBootstrap" preserve="all" />
+    <type fullname="EyeTracking.UI.RecorderPanelDiagnostics" preserve="all" />
+    <type fullname="EyeTracking.UI.RecorderPanelMaterialSanitizer" preserve="all" />
+    <type fullname="EyeTracking.UI.PhysicalRecorderPanelController" preserve="all" />
+    <type fullname="EyeTracking.UI.RecorderControlPanel" preserve="all" />
+    <type fullname="EyeTracking.Recording.QuestCameraRecorder" preserve="all" />
+    <type fullname="EyeTracking.Recording.QuestRecordingTelemetrySender" preserve="all" />
+    <type fullname="EyeTracking.Recording.QuestCameraRecorderCommandBridge" preserve="all" />
+  </assembly>
+</linker>

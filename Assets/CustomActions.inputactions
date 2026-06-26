@@ -1,0 +1,46 @@
+{
+    "version": 1,
+    "name": "CustomActions",
+    "maps": [
+        {
+            "name": "custom",
+            "id": "4774d148-6848-4ced-9a99-fe7f6cbcf58b",
+            "actions": [
+                {
+                    "name": "visualizeAlpha",
+                    "type": "Value",
+                    "id": "298b3604-c962-46d1-8eab-70f3990c5d10",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "28c2a9ff-7b3c-434e-b554-bd23505776da",
+                    "path": "<XRController>{LeftHand}/{Primary2DAxis}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "visualizeAlpha",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "68f9487a-ebc1-4fbc-b38e-e772e7a2916c",
+                    "path": "<XRController>{RightHand}/{Primary2DAxis}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "visualizeAlpha",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
