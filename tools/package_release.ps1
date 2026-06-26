@@ -2,6 +2,8 @@ param(
     [string]$Version = "",
     [string]$ApkPath = "Build/EyeTrackingBuild/EyeTrackingTest.apk",
     [string]$OutputDir = "dist",
+    [string]$ReleaseAssetsDir = "ReleaseAssets",
+    [switch]$NoReleaseMirror,
     [switch]$SkipSourceZip
 )
 
@@ -116,8 +118,21 @@ try {
 
 $manifest | ConvertTo-Json -Depth 4 | Set-Content -Encoding ASCII $manifestPath
 
+$releaseDir = $null
+if (-not $NoReleaseMirror) {
+    $releaseDir = Join-Path (Join-Path $projectRoot $ReleaseAssetsDir) $safeVersion
+    New-Item -ItemType Directory -Force -Path $releaseDir | Out-Null
+    if (-not $SkipSourceZip) {
+        Copy-Item -LiteralPath $sourceZip -Destination $releaseDir -Force
+    }
+    Copy-Item -LiteralPath $apkOut -Destination $releaseDir -Force
+    Copy-Item -LiteralPath $shaPath -Destination $releaseDir -Force
+    Copy-Item -LiteralPath $manifestPath -Destination $releaseDir -Force
+}
+
 Write-Host "Release artifacts:"
 if (-not $SkipSourceZip) { Write-Host "  source:   $sourceZip" }
 Write-Host "  apk:      $apkOut"
 Write-Host "  sha256:   $shaPath"
 Write-Host "  manifest: $manifestPath"
+if ($releaseDir) { Write-Host "  mirror:   $releaseDir" }

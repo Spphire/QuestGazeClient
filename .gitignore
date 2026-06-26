@@ -80,6 +80,9 @@ crashlytics-build.properties
 /[Aa]ssets/[Ss]treamingAssets/aa/*
 /Assets/EcXR/Shaders
 
-# Local release packaging output. Upload these to GitHub Releases instead.
+# Local release packaging scratch output.
 /[Dd]ist/
-/[Rr]elease[Aa]ssets/
+
+# Versioned release artifacts are tracked with Git LFS for SSH-only access.
+!/[Rr]elease[Aa]ssets/
+!/[Rr]elease[Aa]ssets/**

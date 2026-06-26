@@ -1,0 +1,12 @@
+{
+    "name":  "QuestGazeClient",
+    "version":  "v2026.06.27-initial",
+    "unityVersion":  "6000.0.60f1",
+    "sourceZip":  "QuestGazeClient-source-v2026.06.27-initial.zip",
+    "apk":  "QuestGazeClient-v2026.06.27-initial.apk",
+    "sha256":  "QuestGazeClient-v2026.06.27-initial.sha256.txt",
+    "apkSource":  "W:\\lasertag-projs\\Build\\EyeTrackingBuild\\EyeTrackingTest.apk",
+    "createdUtc":  "2026-06-26T17:08:15.7094114Z",
+    "gitCommit":  "7b15a38e84766c8e853e55b1e6573278c461d44b",
+    "gitBranch":  "main"
+}

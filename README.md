@@ -35,8 +35,9 @@ Build/EyeTrackingBuild/EyeTrackingTest.apk
 
 ## Release Assets
 
-APK files and full source ZIP snapshots are managed as GitHub Release assets,
-not committed into the repository. After building the APK:
+APK files and full source ZIP snapshots are managed under `ReleaseAssets/` with
+Git LFS so the project can be restored even when the Unity/GitHub Release
+environment is awkward. After building the APK:
 
 ```powershell
 tools/package_release.ps1
