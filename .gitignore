@@ -82,7 +82,4 @@ crashlytics-build.properties
 
 # Local release packaging scratch output.
 /[Dd]ist/
-
-# Versioned release artifacts are tracked with Git LFS for SSH-only access.
-!/[Rr]elease[Aa]ssets/
-!/[Rr]elease[Aa]ssets/**
+/[Rr]elease[Aa]ssets/

@@ -6,10 +6,8 @@ assets:
 - Git stores the Unity source project.
 - Git LFS stores large Unity binary assets such as FBX, TGA, HDR, EXR, PNG, and
   native tool binaries.
-- APK files and full source ZIP snapshots are generated into `dist/`, then
-  copied into `ReleaseAssets/<version>/` and tracked with Git LFS. If GitHub CLI
-  or API access is available, the same files can also be uploaded to a GitHub
-  Release for convenience.
+- APK files and full source ZIP snapshots are generated into `dist/` and
+  uploaded to GitHub Releases. They are not committed to the repository.
 
 ## Build/Package Environment
 
@@ -44,8 +42,7 @@ This creates:
 - `dist/QuestGazeClient-<version>.apk`
 - `dist/QuestGazeClient-<version>.sha256.txt`
 - `dist/QuestGazeClient-<version>.release.json`
-- `ReleaseAssets/<version>/` with the same files ready to commit
 
-Commit `ReleaseAssets/<version>/` and push. The source ZIP is useful when the
-Unity/Git LFS environment is painful to reproduce, while Git remains the
-canonical source history.
+Upload these files to the matching GitHub Release tag. The source ZIP is useful
+when the Unity/Git LFS environment is painful to reproduce, while Git remains
+the canonical source history.
